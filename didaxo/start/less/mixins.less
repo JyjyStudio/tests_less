@@ -1,4 +1,3 @@
-//main: ddxBlog.less
 //mixins
 
 //Make element responsive
@@ -67,12 +66,12 @@
 	border-radius: 0 @radius @radius 0;
 }
 //grid classes
-.columns(@numCols; @gutter:0; @gridCols : @colsInGrid ){
+.columns(@numCols; @gutter: 0; @gridCols : @colsInGrid ){
 	.cols() when (@gutter = 0){
-		width: percentage(@numCols / @gridCols);
+		width: (percentage(@numCols / @gridCols));
 	}
 	.cols() when (@gutter > 0 ){
-		@totalWidth: percentage(@numCols / @gridCols);
+		@totalWidth: (percentage(@numCols / @gridCols));
 		width: ~'calc(@{totalWidth} - @{gutter} )';
 		margin-right: @gutter;
 	}
@@ -87,9 +86,3 @@
 .hexToRgba(@color, @opacity: 1){
 	@rgbaColor : rgba(red(@color), green(@color), blue(@color), @opacity);
 }
-
-
-
-
-
-
